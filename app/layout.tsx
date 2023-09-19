@@ -11,6 +11,8 @@ const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL
 const twitterCreator = TWITTER_CREATOR ? ensureStartsWith(TWITTER_CREATOR, '@') : undefined;
 const twitterSite = TWITTER_SITE ? ensureStartsWith(TWITTER_SITE, 'https://') : undefined;
 
+export const runtime = 'edge';
+
 export const metadata = {
   metadataBase: new URL(baseUrl),
   title: {
